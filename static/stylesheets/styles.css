@@ -1,0 +1,20 @@
+.no-pins-here{
+	text-align: center;
+}
+
+.pin{}
+
+.pin .pin__meta {
+	text-align: right;
+	font-weight: bold;
+	padding-bottom: 19px;
+}
+.pin .pin__meta a:hover {
+	text-decoration: none;
+}
+
+.btn-add-new-pin {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
