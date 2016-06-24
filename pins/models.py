@@ -5,6 +5,7 @@ from authentication.models import Account
 class Pin(models.Model):
     #setting up a many to one relationship
     author = models.ForeignKey(Account)
+    title = models.TextField()
     content = models.TextField()
     image = models.TextField()
     latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True)

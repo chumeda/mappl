@@ -38,6 +38,7 @@
 		/**
 		 * @name create
 		 * @desc Create a new Pin
+		 * @param {string} title of the new Pin
 		 * @param {string} content The content of a new Pin
 		 * @param {string} image The name of the image of a Pin
 		 * @param {decimal} latitude of the location of topic of pin
@@ -46,12 +47,15 @@
 		 * @returns {Promise}
 		 * @memberOf mappl2.pins.services.Pins 
 		 */
-		function create(content, image) {
+		function create(title, content, image, latitude, longitude, link) {
 			console.log(content + ' and ' + image);
 			return $http.post('/api/v1/pins/', {
+				title: title,
 				content: content,
-				image: image
-
+				image: image,
+				latitude: latitude,
+				longitude: longitude,
+				link: link
 			});
 		}
 		

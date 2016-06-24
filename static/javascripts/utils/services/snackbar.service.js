@@ -29,6 +29,7 @@
 		/**
 		 * @name _snackbar
 		 * @desc Display a snackbar
+		 * @param {string} title 
 		 * @param {string} content The content of the snackbar
 		 * @param {string} image The image of the pin
 		 * @param {decimal} latitude of the pin
@@ -36,10 +37,10 @@
 		 * @param {string} link of pin
 		 * @param {Object} options Options for displaying the snackbar
 		 */
-		function _snackbar(content, image, options) {
+		function _snackbar(title, options) {
+			
 			options = _.extend({timeout: 3000}, options);
-			options.content = content;
-			options.image = image;
+			options.title = title;
 			
 			$.snackbar(options);
 		}
@@ -51,8 +52,8 @@
 		 * @param {Object} options Options for displaying the snackbar
 		 * @memberOf mappl2.utils.services.Snackbar 
 		 */
-		function error(content, options) {
-			_snackbar('Error: ' + content, options);
+		function error(title, options) {
+			_snackbar('Error: ' + title, options);
 		}
 		
 		/**
@@ -63,8 +64,9 @@
 		 * @param {Object} options Options for displaying the snackbar
 		 * @memberOf mappl2.utils.services.Snackbar 
 		 */
-		function show(content, image, options){
-			_snackbar(content, image, options);
+		function show(title, options){
+			
+			_snackbar(title, options);
 		}
 	}
 })($, _);

@@ -4,6 +4,10 @@
 
 .pin{}
 
+.pin .pin__image{
+	width:100%;
+}
+
 .pin .pin__meta {
 	text-align: right;
 	font-weight: bold;

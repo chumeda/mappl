@@ -1,11 +1,19 @@
 <form role="form" ng-submit="vm.submit()">
 	<div class="form-group">
-		<label for="pin__image">image</label>
+		<label for="pin__image">Image</label>
 		<input type="text" 
 			class="form-control" 
 			id="pin__image" 
 			ng-model="vm.image" 
 			placeholder="Name of image goes here."/>
+	</div>
+	<div class="form-group">
+		<label for="pin__title">Title</label>
+		<input type="text" 
+			class="form-control" 
+			id="pin__title" 
+			ng-model="vm.title" 
+			placeholder="Short title for pin goes here."/>
 	</div>
 	<div class="form-group">
 		<label for="pin__content">New Pin</label>
@@ -15,9 +23,31 @@
 			placeholder="Pin description goes here"
 			ng-model="vm.content">
 		</textarea>
-		
 	</div>
-	
+	<div class="form-group">
+		<label for="pin__latitude">Latitude</label>
+		<input type="number"
+			step="0.000001"
+			class="form-control"
+			id="pin__latitude"
+			ng-model="vm.latitude" />
+	</div>
+	<div class="form-group">
+		<label for="pin__longitude">Longitude</label>
+		<input type="number"
+			step="0.000001"
+			class="form-control"
+			id="pin__longitude"
+			ng-model="vm.longitude" />
+	</div>
+	<div class="form-group">
+		<label for="pin__link">Link</label>
+		<input type="text" 
+			class="form-control" 
+			id="pin__link" 
+			ng-model="vm.link" 
+			placeholder="Enter URL that you would like to pin"/>
+	</div>
 	<div class="form-group">
 		<button type="submit" class="btn btn-primary">
 			Submit

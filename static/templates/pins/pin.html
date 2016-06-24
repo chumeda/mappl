@@ -7,14 +7,18 @@
 						{{ pin.author.username }}
 					</a>
 				</div>
+				<a href="{{ pin.link }}" target="_blank">
+					<div class="pin__image">
+						<img src="/static/images/{{ pin.image }}" style="width:100%;"/>
+					</div>
 				
-				<div class="pin__image">
-					{{ pin.image }}
-				</div>
-				
-				<div class="pin__content">
-					{{ pin.content }}
-				</div>
+					<div class="pin__title">
+						{{ pin.title }}
+					</div>
+					<div class="pin_latlong">
+						({{ pin.latitude }}, {{ pin.longitude }})
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>

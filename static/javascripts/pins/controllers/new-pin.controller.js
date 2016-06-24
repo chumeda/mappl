@@ -26,8 +26,12 @@
 		 */
 		function submit() {
 			$rootScope.$broadcast('pin.created', {
+				title: vm.title,
 				content: vm.content,
 				image: vm.image,
+				latitude: vm.latitude,
+				longitude: vm.longitude,
+				link: vm.link,
 				author: {
 					username: Authentication.getAuthenticatedAccount().username
 				}
@@ -35,7 +39,7 @@
 			
 			$scope.closeThisDialog();
 			
-			Pins.create(vm.content, vm.image).then(createPinSuccessFn, createPinErrorFn);
+			Pins.create(vm.title, vm.content, vm.image, vm.latitude, vm.longitude, vm.link).then(createPinSuccessFn, createPinErrorFn);
 			
 			/**
 			 * @name createPinSuccessFn
