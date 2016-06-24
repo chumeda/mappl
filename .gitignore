@@ -4,6 +4,9 @@
 # SQLite3 database
 *.sqlite3
 
+# Images folder
+static/images/
+
 # Node modules
 node_modules/
 
