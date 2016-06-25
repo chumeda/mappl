@@ -1,5 +1,5 @@
 /**
- * Posts
+ * Pins
  * @namespace mappl2.pins.services 
  */
 (function() {

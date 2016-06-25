@@ -11,14 +11,17 @@
 					<div class="pin__image">
 						<img src="/static/images/{{ pin.image }}" style="width:100%;"/>
 					</div>
-				
-					<div class="pin__title">
-						{{ pin.title }}
-					</div>
-					<div class="pin_latlong">
-						({{ pin.latitude }}, {{ pin.longitude }})
-					</div>
 				</a>
+				<div class="pin__title">
+					{{ pin.title }}
+				</div>
+				<div class="pin_latlong">
+					Latitude, Longitude: 
+					({{ pin.latitude }}, {{ pin.longitude }})
+				</div>
+				<div class="pin__content">
+					{{ pin.content }}
+				</div>
 			</div>
 		</div>
 	</div>
