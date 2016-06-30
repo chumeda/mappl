@@ -1,5 +1,5 @@
 
-<pins pins="vm.pins" ng-show="vm.pins && vm.pins.length"></pins>
+<boards boards="vm.boards" ng-show="vm.boards && vm.boards.length"></boards>
 
 <div class="dropup btn-add-new-pin" ng-show="vm.isAuthenticated">
     <button class="btn btn-primary btn-raised mdi-content-add btn-fab dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
@@ -18,4 +18,4 @@
 			ng-dialog="/static/templates/boards/new-board.html"
 			ng-dialog-controller= "NewBoardController as vm">New Board</a></li>
     </ul>
-</div>
+  </div>

@@ -8,7 +8,8 @@
   			'mappl2.authentication',
   			'mappl2.layout',
   			'mappl2.pins', 
-  			'mappl2.utils'
+  			'mappl2.utils',
+  			'mappl2.boards'
   		]);
   		
   	angular

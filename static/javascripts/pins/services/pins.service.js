@@ -61,7 +61,7 @@
 		
 		/**
 		 * @name get
-		 * @desc Get the Pins og a given user
+		 * @desc Get the Pins for a given user
 		 * @param {string} username The username to get Pins for
 		 * @returns {Promise}
 		 * @memberOf mappl2.pins.services.pins 

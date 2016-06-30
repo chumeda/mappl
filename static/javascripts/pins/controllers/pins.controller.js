@@ -1,6 +1,6 @@
 /**
  * PinsController
- * @namespace mappl2.pins.controller 
+ * @namespace mappl2.pins.controllers 
  */
 (function() {
 	'use strict';
@@ -9,27 +9,44 @@
 		.module('mappl2.pins.controllers')
 		.controller('PinsController', PinsController);
 		
-	PinsController.$inject = ['$scope'];
+	PinsController.$inject = ['$scope', 'ngDialog'];
 	
 	/**
 	 * @namespace PinsController 
 	 */
-	function PinsController($scope) {
+	function PinsController($scope, ngDialog) {
+
 		var vm = this;
 		
 		vm.columns = [];
 		
 		activate();
 		
+		$scope.showPin = function(pin) {
+			ngDialog.open({
+				template: '/static/templates/pins/show-pin.html',
+				data: {
+					title: pin.title, 
+					image: pin.image,
+					link: pin.link,
+					latitude: pin.latitude,
+					longitude: pin.longitude,
+					author: pin.author,
+					content: pin.content
+				}
+			});
+		};
+		
 		/**
 		 * @name activate
 		 * @desc Actions to be performed when this controller is instantiated 
-		 * @memberOf mappl2.pins.controller.PinsController
+		 * @memberOf mappl2.pins.controllers.PinsController
 		 */
 		function activate() {
 			$scope.$watchCollection(function() {return $scope.pins;}, render);
 			$scope.$watch(function() { return $(window).width();}, render);
 		}
+		
 		
 		/**
 		 * @name calculateNumberOfColumns
@@ -82,6 +99,7 @@
 			 * @returns The sum of two numbers 
 			 */
 			function sum(m,n) {
+				console.log("SUM");
 				return m + n;
 			}
 		}
@@ -109,4 +127,6 @@
 			}
 		}
 	}
+
 })();
+		

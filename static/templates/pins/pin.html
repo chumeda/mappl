@@ -1,3 +1,6 @@
+<div ng-app="mappl2.pins.controllers">
+<div ng-controller="PinsController">
+	
 <div class="row">
 	<div class="col-sm-12">
 		<div class="well">
@@ -7,22 +10,29 @@
 						{{ pin.author.username }}
 					</a>
 				</div>
-				<a href="{{ pin.link }}" target="_blank">
+				
+				<a ng-click="showPin(pin)" >
 					<div class="pin__image">
 						<img src="/static/images/{{ pin.image }}" style="width:100%;"/>
 					</div>
+				
 				</a>
 				<div class="pin__title">
 					{{ pin.title }}
 				</div>
-				<div class="pin_latlong">
+				<!--<div class="pin_latlong">
 					Latitude, Longitude: 
 					({{ pin.latitude }}, {{ pin.longitude }})
 				</div>
 				<div class="pin__content">
 					{{ pin.content }}
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
 </div>
+
+</div>
+</div>
+<!--
+-->

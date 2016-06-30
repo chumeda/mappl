@@ -26,6 +26,11 @@
 			controller: 'IndexController',
 			controllerAs:'vm',
 			templateUrl: '/static/templates/layout/index.html'
+		}).when('/boards', {
+			controller: 'BoardsIndexController', 
+			controllerAs: 'vm',
+			templateUrl: '/static/templates/layout/boards-index.html'
 		}).otherwise('/');
+		
 	}
 })();

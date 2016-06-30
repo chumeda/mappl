@@ -1,0 +1,23 @@
+<form role="form" ng-submit="vm.submit()">
+	<div class="form-group">
+		<label for="board__title">Title</label>
+		<input type="text" 
+			class="form-control" 
+			id="board__title" 
+			ng-model="vm.title" 
+			placeholder="Title for your new board goes here."/>
+	</div>
+	<div class="form-group">
+		<label for="board__description">Description</label>
+		<input type="text" 
+			class="form-control" 
+			id="board__description" 
+			ng-model="vm.decsription" 
+			placeholder="What is your new board about?"/>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">
+			Submit
+		</button>
+	</div>
+</form>

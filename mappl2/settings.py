@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'mappl2',
     'authentication',
     'pins',
+    'boards',
 ]
 
 MIDDLEWARE_CLASSES = [
