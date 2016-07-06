@@ -1,6 +1,6 @@
 /** 
  * BoardsController
- * @namespace mappl2. layout.controllers 
+ * @namespace mappl2.layout.controllers 
  */ 
  (function() {
  	'use strict';
@@ -17,7 +17,7 @@
  	function BoardsIndexController($scope, Authentication, Boards, Snackbar) {
  		var vm = this;
  		
- 		vm.isAuthentication = Authentication.isAuthenticated();
+ 		vm.isAuthenticated = Authentication.isAuthenticated();
  		vm.boards = [];
  		
  		activate();
@@ -28,6 +28,7 @@
  		 * @memberOf mappl2.layout.controller.BoardsIndexController 
  		 */
  		function activate() {
+ 			
  			Boards.all().then(boardsSuccessFn, boardsErrorFn);
  			
  			$scope.$on('board.created', function(event, board) {

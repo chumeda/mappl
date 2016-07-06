@@ -25,7 +25,7 @@
 			scope: {
 				boards: '='
 			},
-			templateUrl: '/static/template/boards/boards.html'
+			templateUrl: '/static/templates/boards/boards.html'
 		};
 		
 		return directive;

@@ -34,7 +34,7 @@
 			});
 			
 			$scope.closeThisDialog();
-			
+			alert(vm.description);
 			Boards.create(vm.title, vm.description).then(createBoardSuccessFn, createBoardErrorFn);
 			
 			/**

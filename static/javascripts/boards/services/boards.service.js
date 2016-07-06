@@ -45,6 +45,7 @@
 		 * @memberOf mappl2.boards.services.Boards
 		 */
 		function create(title, description) {
+			console.log(title + " and " + description);
 			return $http.post('/api/v1/boards/', {
 				title: title,
 				description: description
