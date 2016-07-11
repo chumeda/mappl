@@ -41,6 +41,7 @@
 	 	*/
 		function register() {
 			Authentication.register(vm.email, vm.password, vm.username);
+			$location.url('/login');
 		}
 	}
 })();

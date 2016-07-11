@@ -9,7 +9,8 @@
   			'mappl2.layout',
   			'mappl2.pins', 
   			'mappl2.utils',
-  			'mappl2.boards'
+  			'mappl2.boards',
+  			'mappl2.profiles'
   		]);
   		
   	angular

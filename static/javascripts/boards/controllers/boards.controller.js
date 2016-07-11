@@ -9,17 +9,23 @@
 		.module('mappl2.boards.controllers')
 		.controller('BoardsController', BoardsController);
 		
-	BoardsController.$inject = ['$scope'];
+	BoardsController.$inject = ['$scope', 'Boards', '$location'];
 	
 	/**
 	 * @namespace BoardsController 
 	 */
-	function BoardsController($scope) {
+	function BoardsController($scope, Boards, $location) {
 		var vm = this;
 		
 		vm.columns = [];
 		
 		activate();
+		
+		$scope.openBoard = function(board) {
+			Boards.setBoard(board);
+			alert(Boards.getBoard().author.username);
+			$location.path('/' + board.author.username + '/' + board.title);
+		};
 		
 		/**
 		 * @name activate

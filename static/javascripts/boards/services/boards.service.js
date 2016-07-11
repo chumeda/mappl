@@ -16,10 +16,13 @@
 	 * returns {Factory} 
 	 */
 	function Boards($http) {
+		var savedBoard = {};
 		var Boards = {
 			all: all,
 			create: create,
-			get: get
+			get: get,
+			setBoard: setBoard,
+			getBoard: getBoard
 		};
 		
 		return Boards;
@@ -61,6 +64,14 @@
 		 */
 		function get(username) {
 			return $http.get('/api/v1/accounts/' + username + '/boards/');
+		}
+		
+		function setBoard(board) {
+			savedBoard = board;
+		}
+		
+		function getBoard() {
+			return savedBoard;
 		}
 	}
 })();

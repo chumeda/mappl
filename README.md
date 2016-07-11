@@ -1,4 +1,4 @@
-# Mapple
+# Mappl
 
 I used this tutorial to get started:
 https://thinkster.io/django-angularjs-tutorial#learning-django-and-angularjs
