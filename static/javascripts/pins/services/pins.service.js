@@ -47,15 +47,16 @@
 		 * @returns {Promise}
 		 * @memberOf mappl2.pins.services.Pins 
 		 */
-		function create(title, content, image, latitude, longitude, link) {
-			console.log(content + ' and ' + image);
+		function create(title, content, image, latitude, longitude, link, board) {
+			console.log('/api/v1/boards/'+board.id);
 			return $http.post('/api/v1/pins/', {
 				title: title,
 				content: content,
 				image: image,
 				latitude: latitude,
 				longitude: longitude,
-				link: link
+				link: link,
+				board: board
 			});
 		}
 		

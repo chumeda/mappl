@@ -9,13 +9,20 @@
 		.module('mappl2.pins.controllers')
 		.controller('NewPinController', NewPinController);
 		
-	NewPinController.$inject = ['$rootScope', '$scope', 'Authentication', 'Snackbar', 'Pins'];
+	NewPinController.$inject = ['$rootScope', '$scope', 'Authentication', 'Snackbar', 'Pins', 'Boards'];
 	
 	/**
 	 * @namespace NewPinController 
 	 */
-	function NewPinController($rootScope, $scope, Authentication, Snackbar, Pins) {
+	function NewPinController($rootScope, $scope, Authentication, Snackbar, Pins, Boards) {
 		var vm = this;
+		$scope.boards = [];
+		Boards.get(Authentication.getAuthenticatedAccount().username)
+			.then(function(data){
+				vm.boards = data.data;
+				console.log(vm.boards[0].title);
+			}
+		);
 		
 		vm.submit = submit;
 		
@@ -25,6 +32,7 @@
 		 * @memberOf mappl2.pins.controllers.NewPinController 
 		 */
 		function submit() {
+			
 			$rootScope.$broadcast('pin.created', {
 				title: vm.title,
 				content: vm.content,
@@ -34,12 +42,15 @@
 				link: vm.link,
 				author: {
 					username: Authentication.getAuthenticatedAccount().username
+				},
+				board: {
+					title: vm.board.title
 				}
 			});
 			
 			$scope.closeThisDialog();
-			
-			Pins.create(vm.title, vm.content, vm.image, vm.latitude, vm.longitude, vm.link).then(createPinSuccessFn, createPinErrorFn);
+			alert(vm.board.id);
+			Pins.create(vm.title, vm.content, vm.image, vm.latitude, vm.longitude, vm.link, vm.board).then(createPinSuccessFn, createPinErrorFn);
 			
 			/**
 			 * @name createPinSuccessFn

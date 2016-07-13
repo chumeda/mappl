@@ -23,6 +23,7 @@
 		activate();
 		
 		$scope.showPin = function(pin) {
+			alert(pin.board);
 			ngDialog.open({
 				template: '/static/templates/pins/show-pin.html',
 				data: {
@@ -32,7 +33,8 @@
 					latitude: pin.latitude,
 					longitude: pin.longitude,
 					author: pin.author,
-					content: pin.content
+					content: pin.content,
+					board: pin.board
 				}
 			});
 		};

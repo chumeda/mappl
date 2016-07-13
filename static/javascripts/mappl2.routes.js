@@ -38,6 +38,10 @@
 			controller: 'ProfileSettingsController',
 			controllerAs: 'vm',
 			templateUrl: '/static/templates/profiles/settings.html'
+		}).when('/:username/boardview', {
+			controller: 'ViewBoardController',
+			controllerAs: 'vm',
+			templateUrl: '/static/templates/boards/open-board.html'
 		})
 		.otherwise('/');
 		

@@ -1,10 +1,12 @@
 from django.db import models
 from authentication.models import Account
+from boards.models import Board
 
 # Create your models here.
 class Pin(models.Model):
     #setting up a many to one relationship
     author = models.ForeignKey(Account)
+    board = models.ForeignKey(Board)
     title = models.TextField()
     content = models.TextField()
     image = models.TextField()

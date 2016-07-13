@@ -1,4 +1,17 @@
+<div ng-app="mappl2.pins.controllers">
+<div ng-controller="NewPinController">
 <form role="form" ng-submit="vm.submit()">
+	<div class="form-group">
+		<label for="pin__board">Board</label>
+		<select class="form-control"
+			id="pin__board" 
+			ng-model="vm.board" 
+			ng-options="board.title for board in vm.boards">
+			<option value="" disabled selected>Select your board</option>
+		</select>
+	</div>
+	
+	
 	<div class="form-group">
 		<label for="pin__image">Image</label>
 		<input type="text" 
@@ -54,3 +67,5 @@
 		</button>
 	</div>
 </form>
+</div>
+</div>
