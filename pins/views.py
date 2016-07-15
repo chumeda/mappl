@@ -6,7 +6,15 @@ from pins.models import Pin
 from pins.permissions import IsAuthorOfPin
 from pins.serializers import PinSerializer
 
+
+import logging
+logging.basicConfig(filename='example.log',level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+logging.info('So should this')
+logging.warning('And this, too')
+
 class PinViewSet(viewsets.ModelViewSet):
+    logging.info('Inside PinViewSet')
     queryset = Pin.objects.order_by('-created_at')
     serializer_class = PinSerializer
     
@@ -16,7 +24,11 @@ class PinViewSet(viewsets.ModelViewSet):
         return (permissions.IsAuthenticated(), IsAuthorOfPin(),)
     
     def perform_create(self, serializer):
-        instance = serializer.save(author=self.request.user)
+        logging.info('Inside perform_create function')
+        data = self.request.data
+        logging.info(str(data['board']))
+        
+        instance = serializer.save(author=self.request.user, board_id=data['board'])
         
         return super(PinViewSet, self).perform_create(serializer)
     

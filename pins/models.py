@@ -6,7 +6,7 @@ from boards.models import Board
 class Pin(models.Model):
     #setting up a many to one relationship
     author = models.ForeignKey(Account)
-    board = models.ForeignKey(Board)
+    board = models.ForeignKey(Board, null=True, blank=True)
     title = models.TextField()
     content = models.TextField()
     image = models.TextField()

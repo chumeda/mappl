@@ -1,12 +1,11 @@
 from rest_framework import serializers
-
 from authentication.serializers import AccountSerializer
 from pins.models import Pin
 from boards.serializers import BoardSerializer
 
 class PinSerializer(serializers.ModelSerializer):
     author = AccountSerializer(read_only=True, required=False)
-    board = BoardSerializer()
+    board = BoardSerializer(read_only=True, required=False)
     
     class Meta:
         model = Pin

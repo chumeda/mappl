@@ -4,12 +4,15 @@ from boards.models import Board
 
 class BoardSerializer(serializers.ModelSerializer):
     author = AccountSerializer(read_only=True,required=False)
-    
+  
     class Meta:
         model = Board
         
         fields = ('id', 'author', 'title', 'description', 'created_at', 'updated_at')
         read_only_fields = ('id', 'created_at', 'updated_at')
+        
+        def create(self, validated_data):
+            return Board.objects.create(**validated_data)
         
     def get_validation_exclusions(self, *args, **kwargs):
         exclusions = super(BoardSerializer, self).get_validation_exclusions()
