@@ -29,7 +29,27 @@
 		 * @memberOf mappl2.boards.controller.ViewBoardController 
 		 */
 		function activate() {
-			alert(vm.board.description);
+			//alert(vm.board.author.username);
+			Pins.getByBoard(vm.board.id).then(pinsSuccessFn, pinsErrorFn);
+			//Pins.all().then(pinsSuccessFn, pinsErrorFn);
+			
+			/** 
+			 * @name pinSuccessFn
+			 * @desc Update pins array on view
+			 */
+			function pinsSuccessFn(data, status, headers,config) {
+				//alert('pinsSuccessFn, ViewBoardController'+ data.data);
+				vm.pins = data.data;
+			}
+			
+			/**
+			 * @name pinsErrorFn
+			 * @desc Show snackbar with error 
+			 */
+			function pinsErrorFn(data, status, headers, config) {
+				Snackbar.error(data.error);
+			}
 		}
+		
 	}
 })();

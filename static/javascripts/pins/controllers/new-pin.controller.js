@@ -49,7 +49,7 @@
 			});
 			
 			$scope.closeThisDialog();
-			alert(vm.board.id);
+			//alert(vm.board.id);
 			Pins.create(vm.title, vm.content, vm.image, vm.latitude, vm.longitude, vm.link, vm.board).then(createPinSuccessFn, createPinErrorFn);
 			
 			/**

@@ -38,7 +38,7 @@
 			controller: 'ProfileSettingsController',
 			controllerAs: 'vm',
 			templateUrl: '/static/templates/profiles/settings.html'
-		}).when('/:username/boardview', {
+		}).when('/boards/:board', {
 			controller: 'ViewBoardController',
 			controllerAs: 'vm',
 			templateUrl: '/static/templates/boards/open-board.html'

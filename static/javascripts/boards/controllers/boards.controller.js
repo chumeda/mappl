@@ -23,9 +23,9 @@
 		
 		$scope.openBoard = function(board) {
 			Boards.setBoard(board);
-			//alert(Boards.getBoard().author.username);
-			alert('/' + board.author.username + '/' + board.id);
-			$location.path('/' + board.author.username + '/boardview' );
+			
+			//alert('/' + board.author.username + '/' + board.id);
+			$location.path('/boards/' +  board.id);
 		};
 		
 		/**

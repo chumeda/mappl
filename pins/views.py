@@ -41,3 +41,18 @@ class AccountPinsViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         
         return Response(serializer.data)
+    
+class BoardPinsViewSet(viewsets.ViewSet):
+    serializer_class = PinSerializer
+    
+    def list(self, request, board_pk=None):
+        queryset = Pin.objects.filter(board=board_pk)
+        serializer = PinSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    def retrieve(self, request, pk=None, board_pk=None):
+        queryset = Pin.objects.filter(pk=pk, board=board_pk)
+        pin = get_object_or_404(querysey, pk=pk)
+        serializer = PinSerializer(pin)
+        return Response(serializer.data)
+    

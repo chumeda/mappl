@@ -23,7 +23,7 @@
 		activate();
 		
 		$scope.showPin = function(pin) {
-			alert(pin.board);
+			//alert(pin.board);
 			ngDialog.open({
 				template: '/static/templates/pins/show-pin.html',
 				data: {
@@ -45,6 +45,7 @@
 		 * @memberOf mappl2.pins.controllers.PinsController
 		 */
 		function activate() {
+			//alert('inside pins.controller.js');
 			$scope.$watchCollection(function() {return $scope.pins;}, render);
 			$scope.$watch(function() { return $(window).width();}, render);
 		}

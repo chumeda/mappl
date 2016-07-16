@@ -19,7 +19,8 @@
 		var Pins = {
 			all: all,
 			create: create,
-			get: get
+			get: get,
+			getByBoard: getByBoard
 		};
 		return Pins;
 		
@@ -70,7 +71,22 @@
 		 * @memberOf mappl2.pins.services.pins 
 		 */
 		function get(username) {
-			return $http.get('/api/v1/accounts/' + username + '/pins/');
+			var promise = $http.get('/api/v1/accounts/' + username + '/pins/');
+			console.log('promise'+ promise);
+			return promise;
+		}
+		
+		/**
+		 * @name getByBoard
+		 * @descc Get the Pins for the given board
+		 * @param {int} id The id of the board to get the Pins for
+		 * @returns {Promise}
+		 * @memberOf mappl2.pins.services.pins 
+		 */
+		function getByBoard(id) {
+			var promise = $http.get('/api/v1/boards/' + id + '/pins/');
+			console.log('board promise' + '/api/v1/boards/' + id + '/pins/');
+			return promise;
 		}
 	}
 })();

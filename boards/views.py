@@ -21,6 +21,17 @@ class BoardViewSet(viewsets.ModelViewSet):
         
         return super(BoardViewSet,self).perform_create(serializer)
     
+    def list(self, request):
+        queryset = Board.objects.filter()
+        serializer = BoardSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    def retrieve(self, request, pk=None):
+        queryset = Board.objects.filter()
+        board = get_object_or_404(queryset, pk=pk)
+        serializer = BoardSerializer(board)
+        return Response(serializer.data)
+    
     
 class AccountBoardsViewSet(viewsets.ViewSet):
     queryset = Board.objects.select_related('author').all()
@@ -31,3 +42,4 @@ class AccountBoardsViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         
         return Response(serializer.data)
+    
