@@ -48,7 +48,8 @@
 		 * @returns {Promise}
 		 * @memberOf mappl2.pins.services.Pins 
 		 */
-		function create(title, content, image, latitude, longitude, link, board) {
+		function create(title, content, image, latitude, longitude, link, board,
+			location, mapsURL, usPOC, hnPOC, mgrs) {
 			console.log("hi");
 			console.log(board.id);
 			
@@ -60,6 +61,10 @@
 				latitude: latitude,
 				longitude: longitude,
 				link: link,
+				location: location,
+				usPOC: usPOC,
+				hnPOC: hnPOC,
+				mgrs: mgrs
 			});
 		}
 		

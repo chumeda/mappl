@@ -10,7 +10,10 @@ class PinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pin
         
-        fields = ('id', 'author', 'board', 'title', 'content', 'image','latitude', 'longitude', 'link', 'created_at', 'updated_at')
+        fields = ('id', 'author', 'board', 'title', 'content', 
+                  'image','latitude', 'longitude', 'link', 'location', 
+                  'mapsURL', 'usPOC', 'hnPOC', 'mgrs', 
+                  'created_at', 'updated_at')
         read_only_fields = ('id', 'created_at', 'updated_at')
         
         def get_validation_exclusions(self, *args, **kwargs):

@@ -6,12 +6,16 @@
 
 .pin .pin__image{
 	width:100%;
+	margin-bottom: 10px;
 }
-
-.pin .pin__meta {
-	text-align: right;
+.pin__title{
+	margin-bottom: 10px;
+	font-size: 150%;
 	font-weight: bold;
-	padding-bottom: 19px;
+}
+.pin .pin__meta {
+	text-align: left;
+	padding-bottom: 5px;
 }
 .pin .pin__meta a:hover {
 	text-decoration: none;

@@ -34,7 +34,12 @@
 					longitude: pin.longitude,
 					author: pin.author,
 					content: pin.content,
-					board: pin.board
+					board: pin.board,
+					location: pin.location,
+					mapsURL: pin.mapsURL,
+					usPOC: pin.usPOC,
+					hnPOC: pin.hnPOC,
+					mgrs: pin.mgrs
 				}
 			});
 		};

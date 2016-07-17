@@ -1,21 +1,46 @@
+<div class="pin">
+<div class="pin__title">
+	<h2>{{ ngDialogData.title }}</h2>
+</div>
 <a href="{{ ngDialogData.link }}" target="_blank">
-	<div class="pin__title">
-		<h2>{{ ngDialogData.title }}</h2>
-		<b>{{ ngDialogData.board.title }}</b>
-	</div>
+	
 	<div class="pin__image">
 		<img src="/static/images/{{ ngDialogData.image }}" style="width:100%;"/>
 	</div>
 </a>
 <div class="pin__meta">
-	<a href="/{{ ngDialogData.author.username }}">
-		Author: {{ ngDialogData.author.username }}
-	</a>
+<div class="pin__content">
+	<b>Notes:</b> {{ ngDialogData.content }}
+</div>
+<div class="pin__mapsURL">
+	<b>Maps URL:</b> {{ ngDialogData.mapsURL }}
+</div>
+<div class="pin__usPOC">
+	<b>US POC:</b> {{ ngDialogData.usPOC }}
+</div>
+<div class="pin__hnPOPC">
+	<b>HN POC:</b> {{ ngDialogData.hnPOC }}
+</div>
+<div class="pin__mgrs">
+	<b>MGRS:</b> {{ ngDialogData.mgrs }}
+</div>
+<div class="pin__location">
+	<b>Location:</b> {{ ngDialogData.location }}
 </div>
 <div class="pin_latlong">
-	<i>Latitude, Longitude: 
-	({{ ngDialogData.latitude }}, {{ ngDialogData.longitude }}) </i>
+	<b>Latitude, Longitude: </b>
+	({{ ngDialogData.latitude }}, {{ ngDialogData.longitude }}) 
 </div>
-<div class="pin__content">
-	{{ ngDialogData.content }}
+</div>
+
+<div class="pin__meta">
+	Pin created by 
+	<a href="/{{ ngDialogData.author.username }}">
+		{{ ngDialogData.author.username }}
+	</a><br/>
+	On board 
+	<a href="/boards/{{pin.board.id}}">
+		{{ ngDialogData.board.title }}
+	</a>
+</div>
 </div>

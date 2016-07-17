@@ -29,7 +29,7 @@
 			placeholder="Short title for pin goes here."/>
 	</div>
 	<div class="form-group">
-		<label for="pin__content">New Pin</label>
+		<label for="pin__content">Notes</label>
 		<textarea class="form-control"
 			id="pin__content"
 			rows="3"
@@ -38,17 +38,50 @@
 		</textarea>
 	</div>
 	<div class="form-group">
+		<label for="pin__mapsURL">Maps URL</label>
+		<input type="text"
+			class="form-control"
+			id="pin__mapsURL"
+			ng-model="vm.mapsURL" />
+	</div>
+	<div class="form-group">
+		<label for="pin__usPOC">US POC</label>
+		<input type="text"
+			class="form-control"
+			id="pin__usPOC"
+			ng-model="vm.usPOC" />
+	</div>
+	<div class="form-group">
+		<label for="pin__hnPOC">HN POC</label>
+		<input type="text"
+			class="form-control"
+			id="pin__hnPOC"
+			ng-model="vm.hnPOC" />
+	</div>
+	<div class="form-group">
+		<label for="pin__mgrs">MGRS</label>
+		<input type="text"
+			class="form-control"
+			id="pin__mgrs"
+			ng-model="vm.mgrs" />
+	</div>
+	<div class="form-group">
+		<label for="pin__location">Location</label>
+		<input type="text"
+			class="form-control"
+			id="pin__location"
+			ng-model="vm.location" />
+	</div>
+	<div class="form-group">
 		<label for="pin__latitude">Latitude</label>
-		<input type="number"
-			step="0.000001"
+		<input type="text"
 			class="form-control"
 			id="pin__latitude"
 			ng-model="vm.latitude" />
 	</div>
 	<div class="form-group">
 		<label for="pin__longitude">Longitude</label>
-		<input type="number"
-			step="0.000001"
+		<input type="text"
 			class="form-control"
 			id="pin__longitude"
 			ng-model="vm.longitude" />

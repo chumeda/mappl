@@ -5,28 +5,24 @@
 	<div class="col-sm-12">
 		<div class="well">
 			<div class="pin">
-				<div class="pin__meta">
-					<a href="/{{ pin.author.username }}">
-						{{ pin.author.username }}
-					</a>
-				</div>
-				
 				<a ng-click="showPin(pin)" >
 					<div class="pin__image">
 						<img src="/static/images/{{ pin.image }}" style="width:100%;"/>
 					</div>
-				
 				</a>
 				<div class="pin__title">
 					{{ pin.title }}
 				</div>
-				<!--<div class="pin_latlong">
-					Latitude, Longitude: 
-					({{ pin.latitude }}, {{ pin.longitude }})
+				<div class="pin__meta">
+					Pin created by 
+					<a href="/{{ pin.author.username }}">
+						{{ pin.author.username }}
+					</a><br/>
+					On board
+					<a href="/boards/{{pin.board.id}}">
+						{{ pin.board.title }}
+					</a>
 				</div>
-				<div class="pin__content">
-					{{ pin.content }}
-				</div>-->
 			</div>
 		</div>
 	</div>

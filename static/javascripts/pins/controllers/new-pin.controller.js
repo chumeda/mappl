@@ -40,6 +40,11 @@
 				latitude: vm.latitude,
 				longitude: vm.longitude,
 				link: vm.link,
+				location: vm.location,
+				mapsURL: vm.mapsURL,
+				usPOC: vm.usPOC,
+				hnPOC: vm.hnPOC,
+				mgrs: vm.mgrs,
 				author: {
 					username: Authentication.getAuthenticatedAccount().username
 				},
@@ -50,7 +55,9 @@
 			
 			$scope.closeThisDialog();
 			//alert(vm.board.id);
-			Pins.create(vm.title, vm.content, vm.image, vm.latitude, vm.longitude, vm.link, vm.board).then(createPinSuccessFn, createPinErrorFn);
+			Pins.create(vm.title, vm.content, vm.image, vm.latitude, vm.longitude, 
+				vm.link, vm.board, vm.location, vm.mapsURL, vm.usPOC, vm.hnPOC, vm.mgrs)
+				.then(createPinSuccessFn, createPinErrorFn);
 			
 			/**
 			 * @name createPinSuccessFn
