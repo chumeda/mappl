@@ -10,7 +10,7 @@ class BoardManager(models.Model):
 class Board(models.Model):
     author = models.ForeignKey(Account)
     title = models.TextField()
-    description = models.TextField()
+    description = models.TextField(blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

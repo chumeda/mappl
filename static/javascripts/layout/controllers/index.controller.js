@@ -27,7 +27,7 @@
 		 * @memberOf mappl2.layout.controllers.IndexController 
 		 */
 		function activate() {
-			//alert('inside index.controller.js');
+			alert('inside index.controller.js');
 			Pins.all().then(pinsSuccessFn, pinsErrorFn);
 			
 			$scope.$on('pin.created', function(event, pin) {

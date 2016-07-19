@@ -51,6 +51,7 @@
 		 */
 		function activate() {
 			//alert('inside pins.controller.js');
+			console.log("$scope.pins" + toString($scope.pins));
 			$scope.$watchCollection(function() {return $scope.pins;}, render);
 			$scope.$watch(function() { return $(window).width();}, render);
 		}
@@ -84,6 +85,7 @@
 		 */
 		function approximateShortestColumn() {
 			var scores = vm.columns.map(columnMapFn);
+			console.log("scores" +  scores.indexOf(Math.min.apply(this, scores)));
 			return scores.indexOf(Math.min.apply(this, scores));
 			
 			/**
@@ -93,9 +95,10 @@
 			 */
 			function columnMapFn(column) {
 				var lengths = column.map(function(element) {
+					console.log("element" + element.content);
 					return element.content.length;
 				});
-				
+				console.log("lengths" + lengths.reduce(sum, 0) * column.length);
 				return lengths.reduce(sum, 0) * column.length;
 			} 
 			
@@ -103,7 +106,7 @@
 			 * @name sum
 			 * @desc Sums two numbers
 			 * @params {Number} m The first number to be summed
-			 * @params {Number} n The second number to be summed
+			 * @params {Number} n T.he second number to be summed
 			 * @returns The sum of two numbers 
 			 */
 			function sum(m,n) {

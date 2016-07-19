@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'rest_framework',
     'compressor',
     'thinkster_django_angular_boilerplate',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'authentication',
     'pins',
     'boards',
+    'import_export',
 ]
 
 MIDDLEWARE_CLASSES = [

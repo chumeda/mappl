@@ -7,12 +7,13 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pins', '0008_auto_20160712_0832'),
+        ('pins', '0001_initial'),
     ]
 
     operations = [
-        migrations.RemoveField(
+        migrations.AlterField(
             model_name='pin',
-            name='board',
+            name='content',
+            field=models.TextField(null=True),
         ),
     ]

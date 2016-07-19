@@ -51,7 +51,7 @@ urlpatterns = patterns(
     url(r'^api/v1/auth/logout/$', LogoutView.as_view(), name='logout'),
 
     
-    #url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     
     #Always leave for last
     url('^.*$', IndexView.as_view(), name='index'),

@@ -8,7 +8,7 @@ class Pin(models.Model):
     author = models.ForeignKey(Account)
     board = models.ForeignKey(Board, null=True, blank=True)
     title = models.TextField()
-    content = models.TextField()
+    content = models.TextField(null=True, blank=True)
     image = models.TextField()
     latitude = models.TextField(null=True)
     longitude = models.TextField(null=True)
@@ -25,5 +25,5 @@ class Pin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    def __unicode__(self):
-        return '{0}'.format(self,content)
+#    def __unicode__(self):
+#        return '{0}'.format(self,content)

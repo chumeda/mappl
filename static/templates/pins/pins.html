@@ -1,13 +1,13 @@
-
 <div class="row" ng-cloak>
 	<div ng-repeat="column in vm.columns">
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+		<!--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">-->
+			
 			<div ng-repeat="pin in column">
-
+				<div class="col-md-4">
 					<pin pin="pin"></pin>
-
+				</div>
 			</div>
-		</div>
+	<!--	</div>-->
 	</div>
 	
 	<div ng-hide="vm.columns && vm.columns.length">

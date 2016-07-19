@@ -7,13 +7,13 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pins', '0010_pin_board'),
+        ('pins', '0002_auto_20160718_1000'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='pin',
-            name='board',
-            field=models.ForeignKey(blank=True, to='boards.Board', null=True),
+            name='content',
+            field=models.TextField(null=True, blank=True),
         ),
     ]
