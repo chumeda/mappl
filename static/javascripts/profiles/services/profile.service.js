@@ -38,7 +38,7 @@
 			 * @memberOf mappl2.profiles.services.Profile 
 			 */
 			function destroy(profile) {
-				alert(profile.username);
+				//alert(profile.username);
 				return $http.delete('/api/v1/accounts/' + profile.username + '/');
 			}
 			
@@ -61,7 +61,7 @@
 			 * @memberOf mappl2.profiles.services.Profile 
 			 */
 			function update(profile) {
-				alert(profile.username + profile.email);
+				//alert(profile.username + profile.email);
 				return $http.put('/api/v1/accounts/' + profile.username + '/', profile);
 			}
 		}

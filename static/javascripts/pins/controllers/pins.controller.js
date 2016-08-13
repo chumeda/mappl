@@ -9,12 +9,12 @@
 		.module('mappl2.pins.controllers')
 		.controller('PinsController', PinsController);
 		
-	PinsController.$inject = ['$scope', 'ngDialog'];
+	PinsController.$inject = ['$scope', 'ngDialog', 'Boards', '$location'];
 	
 	/**
 	 * @namespace PinsController 
 	 */
-	function PinsController($scope, ngDialog) {
+	function PinsController($scope, ngDialog, Boards, $location) {
 
 		var vm = this;
 		
@@ -44,6 +44,12 @@
 			});
 		};
 		
+		$scope.openBoardFromPin = function(board) {
+			//alert('openBoardFromPin' + board.id);
+			Boards.setBoard(board);
+			$location.path('/boards/' +  board.id);
+		};
+		
 		/**
 		 * @name activate
 		 * @desc Actions to be performed when this controller is instantiated 
@@ -52,8 +58,8 @@
 		function activate() {
 			//alert('inside pins.controller.js');
 			console.log("$scope.pins" + toString($scope.pins));
-			$scope.$watchCollection(function() {return $scope.pins;}, render);
-			$scope.$watch(function() { return $(window).width();}, render);
+			$scope.$watchCollection(function() {return $scope.pins; }, render);
+			//$scope.$watch(function() { return $(window).width(); }, resizeRender);
 		}
 		
 		
@@ -77,6 +83,8 @@
 			}
 		}
 		
+		
+		
 		/**
 		 * @name approximateShortestColumn
 		 * @desc Am algorithm for approximating which column is shortest
@@ -93,10 +101,11 @@
 			 * @desc A map function for scoring heights
 			 * @returns the approximately normalized height of a given column 
 			 */
+			
 			function columnMapFn(column) {
 				var lengths = column.map(function(element) {
-					console.log("element" + element.content);
-					return element.content.length;
+					console.log("element" + element.title);
+					return element.title.length;
 				});
 				console.log("lengths" + lengths.reduce(sum, 0) * column.length);
 				return lengths.reduce(sum, 0) * column.length;
@@ -110,7 +119,6 @@
 			 * @returns The sum of two numbers 
 			 */
 			function sum(m,n) {
-				console.log("SUM");
 				return m + n;
 			}
 		}
@@ -129,6 +137,7 @@
 				
 				for(var i=0; i<calculateNumberOfColumns(); ++i) {
 					vm.columns.push([]);
+					console.log("i "+i);
 				}
 				
 				for(var i=0; i<current.length; ++i) {
@@ -137,6 +146,32 @@
 				}
 			}
 		}
+		
+		/**
+		 *@name resizeRender
+		 * @desc Renders pins into columns of approximately equal height when window is resized
+		 * @param {number} newSize The new window size number
+		 * @param {number} oldSize The current window size updated
+		 * @memberOf mappl2.pins.controllers.PinsControllers
+		 */
+		
+		function resizeRender(newSize, oldSize) {
+			if(newSize !== oldSize) {
+				vm.columns = [];
+				
+				for (var i = 0; i < calculateNumberOfColumns(); ++i) {
+					vm.columns.push([]);
+				}
+				
+				// Fill columns with the current value of pin
+				for(var i = 0; i < $scope.pins.length; ++i) {
+					var column = approximateShortestColumn();
+					vm.columns[column].push($scope.pins[i]);
+				} 
+			}
+			
+		} 
+		
 	}
 
 })();

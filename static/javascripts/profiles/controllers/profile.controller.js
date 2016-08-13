@@ -30,7 +30,7 @@
 		 * @memberOf mappl2.profiles.controller.ProfileController 
 		 */
 		function activate() {
-			alert("activate");
+			//alert("activate");
 			var username = $routeParams.username;
 			
 			Profile.get(username).then(profileSuccessFn, profileErrorFn);
@@ -41,7 +41,7 @@
 			 * @desc Update 'profile' on viewmodel 
 			 */
 			function profileSuccessFn(data, status, headers, config) {
-				alert("profilesuccess");
+				//alert("profilesuccess");
 				vm.profile = data.data;
 			}
 			

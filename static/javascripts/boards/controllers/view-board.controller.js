@@ -20,6 +20,7 @@
 		vm.isAuthenticated = Authentication.isAuthenticated();
 		vm.pins = [];
 		vm.board = Boards.getBoard();
+		vm.map = map;
 		
 		activate();
 		
@@ -49,6 +50,11 @@
 			function pinsErrorFn(data, status, headers, config) {
 				Snackbar.error(data.error);
 			}
+		}
+		
+		function map() {
+			//alert(vm.board);
+			Boards.mapBoard(vm.board);
 		}
 		
 	}

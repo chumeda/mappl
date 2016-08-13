@@ -39,7 +39,7 @@
 		{{ ngDialogData.author.username }}
 	</a><br/>
 	On board 
-	<a href="/boards/{{pin.board.id}}">
+	<a ng-click="openBoardFromPin(ngDialogData.board)">
 		{{ ngDialogData.board.title }}
 	</a>
 </div>

@@ -1,11 +1,13 @@
 from django.db import models
 from authentication.models import Account
+from cStringIO import StringIO
 
 # Create your models here.
 class BoardManager(models.Model):
     def create_board(self, title, description, **kwargs):
         board.save()
         return board
+  
 
 class Board(models.Model):
     author = models.ForeignKey(Account)

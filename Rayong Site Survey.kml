@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Folder><Placemark>
+<name>Rayong LCAC Left Flank</name>
+<description>
+Notes: Large  step up left of left flank.  Recommend  entering at center beach and translate left to make room for another LCAC
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>101.312083,12.644278,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Rayong LCAC Center View</name>
+<description>
+Notes: 90 yards between left and right flank
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>101.312417,12.644139,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Rayong LCAC Right Flank</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>101.312786,12.644042,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Rayong LCAC Access Road</name>
+<description>
+Notes: Vehicle access road runs entire length behind beach
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>101.312417,12.644139,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Khlot AAV Access Road</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.974722,12.649944,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Khlot AAV Center View</name>
+<description>
+Notes: Hat Khlot to be used for AAV /CCRC operations only. Not suitable for use by LCU or LCAC
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.974722,12.649944,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Khlot AAV Slope</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.974722,12.649944,0</coordinates>
+</Point></Placemark>
+</Folder></kml>

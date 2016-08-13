@@ -19,7 +19,7 @@
 						{{ pin.author.username }}
 					</a><br/>
 					On board
-					<a href="/boards/{{pin.board.id}}">
+					<a ng-click="openBoardFromPin(pin.board)">
 						{{ pin.board.title }}
 					</a>
 				</div>

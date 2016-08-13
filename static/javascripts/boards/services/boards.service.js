@@ -9,20 +9,21 @@
 		.module('mappl2.boards.services')
 		.factory('Boards', Boards);
 		
-	Boards.$inject = ['$http'];
+	Boards.$inject = ['$http', '$window'];
 	
 	/**
 	 * @namespace Boards
 	 * returns {Factory} 
 	 */
-	function Boards($http) {
+	function Boards($http, $window) {
 		var savedBoard = {};
 		var Boards = {
 			all: all,
 			create: create,
 			get: get,
 			setBoard: setBoard,
-			getBoard: getBoard
+			getBoard: getBoard,
+			mapBoard: mapBoard
 		};
 		
 		return Boards;
@@ -72,6 +73,11 @@
 		
 		function getBoard() {
 			return savedBoard;
+		}
+		
+		function mapBoard(board) {
+			//alert('boardid' + board.id);
+			$window.open('http://localhost:8000/api/v1/boards/'+board.id+'/makeKML/');
 		}
 	}
 })();

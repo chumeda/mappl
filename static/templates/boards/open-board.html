@@ -1,4 +1,10 @@
-
+<div class="row">
+<div class="col-md-9">
 <h3>{{ vm.board.title }}</h3>
 <i>{{ vm.board.description }}</i>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-primary" ng-click="vm.map()">Map it</button>
+</div>
+</div>
 <pins pins="vm.pins" ng-show="vm.pins && vm.pins.length"></pins>

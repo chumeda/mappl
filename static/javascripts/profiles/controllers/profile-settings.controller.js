@@ -21,7 +21,7 @@
 		
 		vm.destroy = destroy;
 		vm.update = update;
-		alert("profile-settings");
+		//alert("profile-settings");
 		activate();
 		
 		/**
@@ -32,7 +32,7 @@
 		function activate() {
 			var authenticatedAccount = Authentication.getAuthenticatedAccount();
 			var username = $routeParams.username;
-			alert(username);
+			//alert(username);
 			//Redirect if not logged in
 			if(!authenticatedAccount) {
 				$location.url('/');
@@ -53,7 +53,7 @@
 		 	* @desc Update 'profile' for view 
 		 	*/
 			function profileSuccessFn(data, status, headers, config) {
-				alert("profileSuccessFn");
+				//alert("profileSuccessFn");
 				vm.profile = data.data;
 			}
 		
@@ -73,7 +73,7 @@
 	 	* @memberOf mappl2.profiles.controllers.ProfileSettingsController 
 	 	*/
 		function destroy() {
-			alert(vm.profile.username);
+			//alert(vm.profile.username);
 			Profile.destroy(vm.profile).then(profileSuccessFn, profileErrorFn);
 		
 			/**
@@ -83,7 +83,7 @@
 			function profileSuccessFn(data, status, headers, config) {
 				
 				Authentication.unauthenticate();
-				alert("deleted, settings controller");
+				//alert("deleted, settings controller");
 				window.location = '/';
 				
 				Snackbar.show('Your account has been deleted.');

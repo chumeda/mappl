@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Folder><Placemark>
+<name>Hat Yao LCAC Left Flank</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.939558,12.607528,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCAC Center View</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.939558,12.607139,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCAC Right Flank</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.939556,12.606889,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCAC Slope</name>
+<description>
+Notes: Will  need  to  clean FOD before  LCAC ops
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.939558,12.607139,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCAC HWM to Access Road</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.939558,12.607139,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCAC Seaward</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.939558,12.607139,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCU Left Flank</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.940222,12.606778,0</coordinates>
+</Point></Placemark>
+<Placemark>
+<name>Hat Yao LCU Center View</name>
+<description>
+Notes: 
+Maps URL: 
+US POC: CWO  CHAMBERS, CARL F. FTX carl.f.chambers@usmc.mil (760)763-0558
+HN POC: 
+MGRS: 
+</description><Point><coordinates>100.940222,12.606686,0</coordinates>
+</Point></Placemark>
+</Folder></kml>
