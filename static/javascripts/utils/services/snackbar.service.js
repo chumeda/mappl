@@ -37,10 +37,10 @@
 		 * @param {string} link of pin
 		 * @param {Object} options Options for displaying the snackbar
 		 */
-		function _snackbar(title, options) {
+		function _snackbar(content, options) {
 			
 			options = _.extend({timeout: 3000}, options);
-			options.title = title;
+			options.content = content;
 			
 			$.snackbar(options);
 		}
@@ -52,8 +52,8 @@
 		 * @param {Object} options Options for displaying the snackbar
 		 * @memberOf mappl2.utils.services.Snackbar 
 		 */
-		function error(title, options) {
-			_snackbar('Error: ' + title, options);
+		function error(content, options) {
+			_snackbar('Error: ' + content, options);
 		}
 		
 		/**
@@ -64,9 +64,9 @@
 		 * @param {Object} options Options for displaying the snackbar
 		 * @memberOf mappl2.utils.services.Snackbar 
 		 */
-		function show(title, options){
+		function show(content, options){
 			
-			_snackbar(title, options);
+			_snackbar(content, options);
 		}
 	}
 })($, _);
