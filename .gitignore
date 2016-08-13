@@ -21,3 +21,6 @@ dist/
 
 # Staticfiles
 staticfiles/
+
+#kml files
+*.kml
