@@ -23,7 +23,8 @@ class AccountManager(BaseUserManager):
         account.save()
 
         return account
-
+    
+    #Super user can access admin site
     def create_superuser(self, email, password, **kwargs):
         account = self.create_user(email, password, **kwargs)
 

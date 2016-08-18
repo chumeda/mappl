@@ -13,6 +13,7 @@ logging.debug('This message should go to the log file')
 logging.info('So should this')
 logging.warning('And this, too')
 
+#For pin feed
 class PinViewSet(viewsets.ModelViewSet):
     logging.info('Inside PinViewSet')
     queryset = Pin.objects.order_by('-created_at')
@@ -31,7 +32,8 @@ class PinViewSet(viewsets.ModelViewSet):
         instance = serializer.save(author=self.request.user, board_id=data['board'])
         
         return super(PinViewSet, self).perform_create(serializer)
-    
+
+#For pins that belong to a certain author
 class AccountPinsViewSet(viewsets.ViewSet):
     queryset = Pin.objects.select_related('author').all()
     serializer_class = PinSerializer
@@ -41,7 +43,8 @@ class AccountPinsViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         
         return Response(serializer.data)
-    
+
+#For pins that belong to a certain board
 class BoardPinsViewSet(viewsets.ViewSet):
     serializer_class = PinSerializer
     

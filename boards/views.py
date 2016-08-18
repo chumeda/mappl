@@ -48,6 +48,7 @@ class BoardViewSet(viewsets.ModelViewSet):
         serializer = BoardSerializer(board)
         return Response(serializer.data)
     
+    #function to create kml file for mapping
     @detail_route(methods=['get'])
     def makeKML(self, request, pk):
         logging.info('Mapping beep boop')
